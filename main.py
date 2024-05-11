@@ -1,12 +1,15 @@
+import time
+
 def add_message(func):
     def inner():
-        print('fantastic')
+        now = time.time()
         func()
-        print('cocacolastic')
+        print(time.time() - now)
     return inner
 
 @add_message
 def gaaay():
-    print('amma gaaay')
+    print('lool')
+    time.sleep(1)
 
 gaaay()
